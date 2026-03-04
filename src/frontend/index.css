@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces[SOFT,WONK,opsz,wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Peridot Agritech Green Brand Palette */
+    --background: 0.97 0.01 130;
+    --foreground: 0.2 0.04 140;
+    --card: 1 0 0;
+    --card-foreground: 0.2 0.04 140;
+    --popover: 1 0 0;
+    --popover-foreground: 0.2 0.04 140;
+
+    /* Primary: Deep forest green */
+    --primary: 0.42 0.13 145;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary: Light sage */
+    --secondary: 0.93 0.03 135;
+    --secondary-foreground: 0.3 0.08 145;
+
+    /* Muted */
+    --muted: 0.93 0.02 130;
+    --muted-foreground: 0.5 0.03 140;
+
+    /* Accent: Peridot gem green-yellow */
+    --accent: 0.88 0.08 135;
+    --accent-foreground: 0.25 0.1 145;
+
+    /* Destructive: Red */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border / Input */
+    --border: 0.88 0.03 135;
+    --input: 0.88 0.03 135;
+    --ring: 0.42 0.13 145;
+
+    /* Chart */
+    --chart-1: 0.42 0.13 145;
+    --chart-2: 0.6 0.12 150;
+    --chart-3: 0.75 0.1 130;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.2 0.04 140;
+    --sidebar-primary: 0.42 0.13 145;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.93 0.03 135;
+    --sidebar-accent-foreground: 0.3 0.08 145;
+    --sidebar-border: 0.88 0.03 135;
+    --sidebar-ring: 0.42 0.13 145;
+
+    /* Custom brand tokens */
+    --brand-green: 0.42 0.13 145;
+    --brand-green-light: 0.65 0.13 145;
+    --brand-green-pale: 0.93 0.05 145;
+    --brand-orange: 0.68 0.17 50;
+    --brand-blue: 0.5 0.15 250;
+    --brand-whatsapp: 0.6 0.18 150;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+/* Invoice print/screenshot styles */
+#invoicePreview {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Button focus styles */
+button:focus-visible {
+  outline: 2px solid oklch(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Mobile tap targets */
+@media (max-width: 640px) {
+  input, select, button {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
